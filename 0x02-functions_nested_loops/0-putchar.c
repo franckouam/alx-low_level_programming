@@ -8,11 +8,13 @@ void print_str(char *str)
 {
 	char tmp;
 	int i = 0;
-
-	do {
-		tmp = str[i++];
+	
+	tmp = str[0];
+	while (tmp != '\0')
+	{
 		_putchar(tmp);
-	} while (tmp != '\0');
+		tmp = str[++i];
+	}
 }
 
 /**
