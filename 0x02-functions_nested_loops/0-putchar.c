@@ -8,7 +8,7 @@ void print_str(char *str)
 {
 	char tmp;
 	int i = 0;
-	
+
 	tmp = str[0];
 	while (tmp != '\0')
 	{
