@@ -75,4 +75,10 @@ void jack_bauer(void);
  */
 int add(int, int);
 
+/**
+ * print_1hr - Print the HH:MM format for one hour.
+ * @hour: The hour to display with its minutes.
+ */
+void print_1hr(int);
+
 #endif /* MAIN_H */
