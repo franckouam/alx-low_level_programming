@@ -14,7 +14,7 @@ void display_nbr(int nbr)
 		nbr = -nbr;
 	}
 	c = nbr / 100;
-	d = nbr / 10;
+	d = (nbr % 100) / 10;
 	u = nbr % 10;
 
 	if (c > 0)
