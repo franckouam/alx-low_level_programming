@@ -18,9 +18,15 @@ void display_nbr(int nbr)
 	u = nbr % 10;
 
 	if (c > 0)
+	{
 		_putchar('0' + c);
-	if (d > 0)
 		_putchar('0' + d);
+	}
+	else
+	{
+		if (d > 0)
+			_putchar('0' + d);
+	}
 	_putchar('0' + u);
 }
 
