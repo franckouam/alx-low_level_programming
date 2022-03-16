@@ -87,4 +87,16 @@ void print_1hr(int);
  */
 void times_table(void);
 
+/**
+ * display_nbr - Display a number.
+ * @nbr: The number which should be displayed.
+ */
+void display_nbr(int nbr);
+
+/**
+ * print_to_98 - Prints all natural numbers from n to 98, followed by a new line..
+ *@n: The starting point number.
+ */
+void print_to_98(int n);
+
 #endif /* MAIN_H */
