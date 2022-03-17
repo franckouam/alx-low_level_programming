@@ -91,12 +91,26 @@ void times_table(void);
  * display_nbr - Display a number.
  * @nbr: The number which should be displayed.
  */
-void display_nbr(int nbr);
+void display_nbr(int);
+
+
+/**
+ * display_cell - Display a cell of the table.
+ * @nbr: The number which should be displayed.
+ * @column: The column where the nbr will be displayed.
+ */
+void display_cell(int, int);
 
 /**
  * print_to_98 - Prints all natural numbers from n to 98, followed by a new line..
  *@n: The starting point number.
  */
-void print_to_98(int n);
+void print_to_98(int);
+
+/**
+ * print_times_table - Prints the n times table, starting with 0.
+ * @n: The size of the table.
+ */
+void print_times_table(int);
 
 #endif /* MAIN_H */
