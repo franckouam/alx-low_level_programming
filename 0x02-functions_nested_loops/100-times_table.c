@@ -50,7 +50,7 @@ void print_times_table(int n)
 
 	if (n == 0)
 	{
-		_putchar(32);
+		_putchar(48);
 		_putchar('\n');
 	}
 	else

@@ -13,6 +13,8 @@ int main(void)
     _putchar('\n');
     print_times_table(98);
     _putchar('\n');
-    print_times_table(12);  
+    print_times_table(12); 
+    _putchar('\n');
+    print_times_table(0);
     return (0);
 }
