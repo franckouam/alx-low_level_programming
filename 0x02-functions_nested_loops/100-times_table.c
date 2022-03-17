@@ -47,7 +47,7 @@ void display_cell(int nbr, int column)
 void print_times_table(int n)
 {
 	int i, j, x;
-	
+
 	if ((n <= 15) && (n > 0))
 	{
 		for (i = 0; i <= n; i++)
@@ -69,5 +69,10 @@ void print_times_table(int n)
 
 			}
 		}
+	}
+	else
+	{
+		_putchar(32);
+		_putchar('\n');
 	}
 }
