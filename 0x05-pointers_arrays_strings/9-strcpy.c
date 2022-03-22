@@ -22,7 +22,7 @@ int _strlen(char *s)
  */
 char *_strcpy(char *dest, char *src)
 {
-	int i, n = _strlen(src);
+	int i, n = _strlen(dest);
 
 	for (i = 0; i < n; i++)
 		dest[i] = src[i];

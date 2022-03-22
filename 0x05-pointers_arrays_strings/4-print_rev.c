@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * _strlen - Returns the length of a string.
  * @s: The string whose the length should be returned.
@@ -16,15 +17,16 @@ int _strlen(char *s)
 }
 
 /**
- * puts_half - Print the second half of a string.
- * @str: The string to print.
+ * print_rev - Prints a string in reverse.
+ * @s: A pointer to the first charcter of the string
+ *     to print in reverse.
  */
-void puts_half(char *str)
+void print_rev(char *s)
 {
-	int n = _strlen(str);
+	int n = _strlen(s);
 	int i;
 
-	for (i = (n + 1) / 2; i < n; i++)
-		_putchar(str[i]);
+	for (i = n; i >= 0; i--)
+		_putchar(s[i]);
 	_putchar('\n');
 }
