@@ -1,5 +1,21 @@
 #include <stdio.h>
-#include <math.h>
+
+/**
+ * _pow - Computes the power of a number by another.
+ * @a: The first number.
+ * @n: The power to compute.
+ * Return: a ^ n.
+ */
+int _pow(int a, int n)
+{
+	int i, res = a;
+	if (n == 0)
+		res = 1;
+	else if (n > 1)
+		for (i = 0; i < n; i++)
+			res = res*a;
+	return (res);
+}
 
 /**
  * _isdigit - Checks for digit character.
@@ -110,7 +126,7 @@ char _atoi(char *s)
 		if (_isdigit(tmp))
 		{
 			ci = char_to_int(tmp);
-			res += ci * pow(10, --n);
+			res += ci * _pow(10, --n);
 			found_1st_int = 1;
 		}
 		else if (found_1st_int)
