@@ -34,7 +34,7 @@ char *_strncat(char *dest, char *src, int n)
 		tmp = src[i];
 		dest[l + i] = tmp;
 		i++;
-	} while (i < n);
+	} while (i < n && tmp != '\0');
 	return (dest);
 
 }
