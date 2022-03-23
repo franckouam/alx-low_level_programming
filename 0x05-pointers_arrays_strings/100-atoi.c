@@ -9,11 +9,12 @@
 int _pow(int a, int n)
 {
 	int i, res = a;
+
 	if (n == 0)
 		res = 1;
 	else if (n > 1)
 		for (i = 1; i < n; i++)
-			res = res*a;
+			res = res * a;
 	return (res);
 }
 
@@ -21,15 +22,15 @@ int _pow(int a, int n)
  * _isdigit - Checks for digit character.
  * @c: The charactere to check.
  * Return: 1 if c is a digit.
- *         0 otherwise
+ *	 0 otherwise
  */
 int _isdigit(int c)
 {
-        int r = 0;
+	int r = 0;
 
-        if ((c > 47) && (c < 58))
-                r = 1;
-        return (r);
+	if ((c > 47) && (c < 58))
+		r = 1;
+	return (r);
 }
 
 /**
@@ -85,9 +86,9 @@ int char_to_int(char c)
 
 
 /**
- * _strlen - Returns the length of a string.
- * @s: The string whose the length should be returned.
- * Return: The length of s.
+ * order - Returns the order of an integer contained in a string.
+ * @s: The string whose the order should be returned.
+ * Return: The order of s.
  */
 int order(char *s)
 {
@@ -110,31 +111,48 @@ int order(char *s)
 }
 
 /**
- * _strcpy - Copies a string to a buffer.
- * @dest: The destination buffer.
- * @src: The source string.
- * Return: dest wich will be a copy of src.
+ * getsign - Get the sign of an integer contained in a string.
+ * @s: The string to extract sign.
+ * Return: -1 if the string has an even number of '-' signs.
+ *	    1 otherwise.
+ */
+int getsign(char *s)
+{
+	int i = -1, sign = 1;
+	char tmp;
+
+	do {
+		tmp = s[++i];
+		if (tmp == '-')
+			sign = sign * -1;
+	} while (tmp != '\0');
+	return (sign);
+}
+
+/**
+ * _atoi - Conversts a string to an integer.
+ * @s: The string to convert
+ * Return: The integer value of the string.
  */
 char _atoi(char *s)
 {
-	int ci, i = -1, n = 0,sign = 1, res = 0, found_1st_int = 0;
+	int ci, i = -1, n = 0, sign = 1, res = 0, found_1st_int = 0;
 	char tmp;
 
 	n = order(s);
+	sign = getsign(s);
 	do {
 		tmp = s[++i];
 		if (_isdigit(tmp))
 		{
 			ci = char_to_int(tmp);
-			res += ci * _pow(10, --n);
+			res += (sign * ci * _pow(10, --n));
 			found_1st_int = 1;
 		}
 		else if (found_1st_int)
 		{
 			break;
 		}
-		if (tmp == '-')
-			sign = sign * -1;
 	} while (tmp != '\0');
-	return (sign * res);
+	return (res);
 }
