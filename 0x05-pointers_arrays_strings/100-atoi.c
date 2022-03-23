@@ -12,7 +12,7 @@ int _pow(int a, int n)
 	if (n == 0)
 		res = 1;
 	else if (n > 1)
-		for (i = 0; i < n; i++)
+		for (i = 1; i < n; i++)
 			res = res*a;
 	return (res);
 }
