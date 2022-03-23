@@ -31,8 +31,9 @@ char *_strncat(char *dest, char *src, int n)
 	if (n > m)
 		n = m;
 	do {
-		tmp = src[i++];
+		tmp = src[i];
 		dest[l + i] = tmp;
+		i++;
 	} while (i < n);
 	return (dest);
 
