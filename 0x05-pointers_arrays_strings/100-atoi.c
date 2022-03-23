@@ -111,25 +111,6 @@ int order(char *s)
 }
 
 /**
- * getsign - Get the sign of an integer contained in a string.
- * @s: The string to extract sign.
- * Return: -1 if the string has an even number of '-' signs.
- *	    1 otherwise.
- */
-int getsign(char *s)
-{
-	int i = -1, sign = 1;
-	char tmp;
-
-	do {
-		tmp = s[++i];
-		if (tmp == '-')
-			sign = sign * -1;
-	} while (tmp != '\0');
-	return (sign);
-}
-
-/**
  * _atoi - Conversts a string to an integer.
  * @s: The string to convert
  * Return: The integer value of the string.
@@ -140,7 +121,20 @@ char _atoi(char *s)
 	char tmp;
 
 	n = order(s);
-	sign = getsign(s);
+	do {
+		tmp = s[++i];
+		if (tmp == '-')
+		{
+			sign = sign * -1;
+			found_1st_int = 1;
+		}
+		else if (found_1st_int)
+		{
+			break;
+		}
+	} while (tmp != '\0');
+	found_1st_int = 0;
+	i = -1;
 	do {
 		tmp = s[++i];
 		if (_isdigit(tmp))
