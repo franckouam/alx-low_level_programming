@@ -29,7 +29,7 @@ char *_strncat(char *dest, char *src, int n)
 	char tmp;
 
 	if (n > m)
-		n = m - 1;
+		n = m;
 	do {
 		tmp = src[i];
 		dest[l + i] = tmp;
