@@ -26,15 +26,13 @@ int _strlen(char *s)
 char *_strncat(char *dest, char *src, int n)
 {
 	int i = 0, l = _strlen(dest), m = _strlen(src);
-	char tmp;
 
 	if (n > m)
 		n = m;
 	do {
-		tmp = src[i];
-		dest[l + i] = tmp;
+		dest[l + i] = src[i];
 		i++;
-	} while (i < n && tmp != '\0');
+	} while (i < n);
 	return (dest);
 
 }
