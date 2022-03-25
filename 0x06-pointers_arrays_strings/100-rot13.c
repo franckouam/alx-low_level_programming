@@ -13,7 +13,7 @@ char *rot13(char *str)
 		for (j = 0; j < 2; j++)
 		{
 			a = starts[j];
-			if ((tmp >= a) && (tmp <= a + 26))
+			if ((tmp > a - 1) && (tmp < a + 26))
 				str[i] = ((tmp - a + 13) % 26) + a;
 		}
 		i++;
