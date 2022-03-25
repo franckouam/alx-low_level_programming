@@ -42,10 +42,10 @@ char *cap_string(char *str)
 
 	do {
 		tmp = str[i];
-		if (_isseparator(tmp))
+		if (_isseparator(tmp) && str[i + 1] != '\0')
 			str[i + 1] = _toupper(str[i + 1]);
 		i++;
-	} while ((tmp != '\0') && (str[i + 1] != '\0'));
+	} while (tmp != '\0');
 	return (str);
 }
 
