@@ -7,11 +7,12 @@
  */
 int _strlen(char *s)
 {
-	int i = -1;
+	int i = 0;
 	char tmp;
 
 	do {
-		tmp = s[++i];
+		tmp = s[i];
+		i++;
 	} while (tmp != '\0');
 	return (i);
 }
@@ -30,7 +31,7 @@ char *_strncat(char *dest, char *src, int n)
 	if (n > m)
 		n = m;
 	do {
-		dest[l + i] = src[i];
+		dest[l - 1 + i] = src[i];
 		i++;
 	} while (i < n);
 	return (dest);
