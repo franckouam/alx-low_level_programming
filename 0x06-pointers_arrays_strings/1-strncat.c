@@ -14,7 +14,7 @@ int _strlen(char *s)
 		tmp = s[i];
 		i++;
 	} while (tmp != '\0');
-	return (i);
+	return (i - 1);
 }
 
 /**
@@ -31,9 +31,9 @@ char *_strncat(char *dest, char *src, int n)
 	if (n > m)
 		n = m;
 	do {
-		dest[l - 1 + i] = src[i];
+		dest[l + i] = src[i];
 		i++;
 	} while (i < n);
 	return (dest);
-
 }
+
