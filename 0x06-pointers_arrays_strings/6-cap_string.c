@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 /**
  * _toupper - Converts a character to uppercase.
  * @c: the character to uppercase.
