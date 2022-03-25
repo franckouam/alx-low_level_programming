@@ -32,7 +32,7 @@ void print_number(int n)
 		n = -n;
 		_putchar('-');
 	}
-	for (tmp = n ;(tmp / 10) > 0; tmp = tmp / 10)
+	for (tmp = n ; (tmp / 10) > 0; tmp = tmp / 10)
 		order++;
 	while (order >= 0)
 	{
@@ -42,3 +42,4 @@ void print_number(int n)
 		order--;
 	}
 }
+
