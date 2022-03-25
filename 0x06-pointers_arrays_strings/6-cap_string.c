@@ -19,7 +19,7 @@ char _toupper(char c)
  * _isseparator - Tell whether or no a character is a string separator.
  * @c: The caracter to check.
  * Return: 1 if c is a separator.
- 	   0 otherwise.
+ *	   0 otherwise.
 */
 int _isseparator(char c)
 {
@@ -46,7 +46,6 @@ char *cap_string(char *str)
 		tmp = str[i];
 		if (_isseparator(tmp))
 			str[i + 1] = _toupper(str[i + 1]);
-			/**printf("J'ai capitalise le caractere %c pour %c\n", tmp, _toupper(tmp));*/
 		i++;
 	} while ((tmp != '\0') && (str[i + 1] != '\0'));
 	return (str);
