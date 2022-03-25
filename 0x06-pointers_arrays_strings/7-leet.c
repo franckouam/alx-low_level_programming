@@ -5,21 +5,16 @@
  */
 char *leet(char *str)
 {
-	int i = 0;
+	int i = 0, j = 0;
 	char tmp;
+	int lc_letters[5] = {65, 69, 79, 84, 76};
+	char corresps[5] = {'4', '3', '0', '7', '1'};
 
 	do {
 		tmp = str[i];
-		if (tmp == 'a' || tmp == 'A')
-			str[i] = '4';
-		else if (tmp == 'e' || tmp == 'E')
-			str[i] = '3';
-		else if (tmp == 'o' || tmp == 'O')
-			str[i] = '0';
-		else if (tmp == 't' || tmp == 'T')
-			str[i] = '7';
-		else if (tmp == 'l' || tmp == 'L')
-			str[i] = '1';
+		for (j = 0; j < 5; j++)
+			if ((tmp == lc_letters[j]) || (((int)tmp - 32) == lc_letters[j]))
+				str[i] = corresps[j];
 		i++;
 	} while (tmp != '\0');
 	return (str);
