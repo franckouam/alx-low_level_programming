@@ -14,7 +14,6 @@ int find(char *str, char c)
 			res = i;
 		i++;
 	} while (res == -1 && str[i] != '\0');
-	printf("A la fin i vaut %d\n", i);
 	if (res == -1 && c == str[i])
 		res = i;
 	return (res);
