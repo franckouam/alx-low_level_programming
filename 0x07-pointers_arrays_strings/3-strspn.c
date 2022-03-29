@@ -7,14 +7,15 @@
  */
 int find(char *str, char c)
 {
-	int i = 0, res = 0;
+        int i = 0, res = -1, end = 0;
 
-	for (i = 0; res == 0 && str[i] != '\0'; i++)
-	{
-		if (str[i] == c)
-			res = 1;
-	}
-	return (res);
+        do {
+                if (str[i++] == c)
+                        res = i;
+        } while ( res == 0 && end == 0); 
+        if (res == 0 && c == str[i])
+                res = i;
+        return (res);
 }
 
 /**
@@ -25,11 +26,15 @@ int find(char *str, char c)
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int res = 1;
-	int i;
+	unsigned int res = 0;
+	int i, end = 0;
 
-	for (i = 0; accept[i] != '\0'; i++)
+	do {
 		if (find(s, accept[i]))
 			res++;
+		if (accept[i] == '\0')
+			end = 1;
+		i++;
+	} while (end == 0);
 	return (res);
 }
