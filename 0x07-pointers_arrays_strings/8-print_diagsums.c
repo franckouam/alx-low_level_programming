@@ -3,7 +3,7 @@
 /**
  * print_diagsums - Prints the sum of the two diagonals.
  * @a: The matrix.
- * @n: The matrix's size.
+ * @size: The matrix's size.
  * Description: Prints the sum of the two diagonals of a square
  *		matrix of integers.
  */
