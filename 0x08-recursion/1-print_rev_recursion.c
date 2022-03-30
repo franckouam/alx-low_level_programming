@@ -7,7 +7,7 @@ void _print_revrec(char *s)
 {
 	if (s[0] == '\0')
 	{
-		_putchar('\n');
+		return;
 	}
 	else
 	{
