@@ -23,5 +23,4 @@ void _print_revrec(char *s)
 void _print_rev_recursion(char *s)
 {
 	_print_revrec(s);
-	_putchar('\n');
 }
