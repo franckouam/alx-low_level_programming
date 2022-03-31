@@ -11,6 +11,8 @@ int _find_sqrt(int n, int to)
 		return (-1);
 	if (n == 0)
 		return (0);
+	if (n == 1)
+		return (1);
 	if (n == to * to)
 		return (to);
 	return (_find_sqrt(n, to - 1));
