@@ -28,7 +28,6 @@ int main(int argc, char *argv[])
 		{
 			if (r - p[i] >= 0)
 			{
-				printf("Je suis entrer dans le if avec r = %d et i = %d\n", r, i);
 				r = r - p[i];
 				n++;
 			}
@@ -37,7 +36,6 @@ int main(int argc, char *argv[])
 				i++;
 			}
 		}
-		printf("Le nombre de pieces a rembourser est: %d\n", n);
 	}
 
 	return (0);
