@@ -21,8 +21,8 @@ int _strlen_recursion(char *s)
  */
 int _chunk_ispal(char *s, int start, int end)
 {
-	if (start == end || end - start == 1)
-		return (s[start] == s[end]);
+	if (start == end)
+		return (1);
 	if (s[start] != s[end])
 		return (0);
 	if (start < end + 1)
