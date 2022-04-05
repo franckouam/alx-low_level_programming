@@ -6,11 +6,11 @@
  * Return: A pointer to the array if everything works well.
  *	   NULL otherwise.
  */
- char *create_array(unsigned int size, char c)
+char *create_array(unsigned int size, char c)
 {
 	char *res;
 	unsigned int i;
-	
+
 	if (size > 0)
 	{
 		res = malloc(size * sizeof(res));
