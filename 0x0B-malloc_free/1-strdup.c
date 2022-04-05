@@ -26,14 +26,15 @@ int _strlen(char *s)
 
 char *_strdup(char *str)
 {
-	int i = 0, n = _strlen(str);
+	int i = 0, n = _strlen(str) + 1;
 	char *res = NULL;
 
 	if (str != NULL)
 	{
 		res = malloc(n * sizeof(char));
-		for (i = 0; i < n; i++)
-			res[i] = str[i];
+		if (res != NULL)
+			for (i = 0; i < n; i++)
+				res[i] = str[i];
 	}
 	return (res);
 }
