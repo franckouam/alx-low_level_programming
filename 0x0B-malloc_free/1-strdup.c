@@ -36,6 +36,10 @@ char *_strdup(char *str)
 			for (i = 0; i < n; i++)
 				res[i] = str[i];
 	}
+	else
+	{
+		res = NULL;
+	}
 	return (res);
 }
 
