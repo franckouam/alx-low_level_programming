@@ -31,10 +31,10 @@ char *_strdup(char *str)
 
 	if (str != NULL)
 	{
-		n = _strlen(str);
+		n = _strlen(str) + 1;
 		res = malloc(n * sizeof(char));
 		if (res != NULL)
-			for (i = 0; i <= n; i++)
+			for (i = 0; i < n; i++)
 				res[i] = str[i];
 	}
 	return (res);
