@@ -31,12 +31,12 @@ char *str_concat(char *s1, char *s2)
 	if (s1 == NULL)
 		n1 = 0;
 	else
-		n1 = _strlen(s1) + 1;
+		n1 = _strlen(s1);
 	if (s2 == NULL)
 		n2 = 0;
 	else
-		n2 = _strlen(s2) + 1;
-	res = malloc((n1 + n2) * sizeof(char));
+		n2 = _strlen(s2);
+	res = malloc((n1 + n2 + 1) * sizeof(char));
 	if (res != NULL)
 	{
 		for (i = 0; i < n1; i++)
