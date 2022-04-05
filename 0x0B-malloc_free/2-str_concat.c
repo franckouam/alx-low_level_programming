@@ -36,11 +36,14 @@ char *str_concat(char *s1, char *s2)
 		n2 = 0;
 	else
 		n2 = _strlen(s2);
-	res = malloc((n1 + n2 - 1) * sizeof(char));
-	for (i = 0; i < n1; i++)
-		res[i] = s1[i];
-	for (j = 0; j < n2; j++)
-		res[i + j] = s2[j];
+	res = malloc((n1 + n2) * sizeof(char));
+	if (res != NULL)
+	{
+		for (i = 0; i < n1; i++)
+			res[i] = s1[i];
+		for (j = 0; j < n2; j++)
+			res[i + j] = s2[j];
+	}
 	return (res);
 }
 
