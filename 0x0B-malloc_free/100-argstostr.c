@@ -4,12 +4,12 @@
  * @s: The string whose the length will be returned.
  * Return: The length of s.
  */
-int _strlen(char *s) 
+int _strlen(char *s)
 {
-        if (*s == 0)
-                return (0);
-        else
-                return (1 + _strlen(s + 1));
+	if (*s == 0)
+		return (0);
+	else
+		return (1 + _strlen(s + 1));
 }
 
 /**
@@ -17,7 +17,7 @@ int _strlen(char *s)
  * @ac: The number of arguments.
  * @av: The arguments array.
  * Return: A string of arguments, each followed by \n.
- * 	   NULL id ac == 0 or av == NULL.
+ *	   NULL id ac == 0 or av == NULL.
  */
 char *argstostr(int ac, char **av)
 {
