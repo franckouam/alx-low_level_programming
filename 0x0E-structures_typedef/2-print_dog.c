@@ -3,7 +3,7 @@
 
 /**
  * print_dog - Print a dog.
- * @dog: The dog to print
+ * @d: The dog to print
  */
 void print_dog(struct dog *d)
 {
@@ -15,7 +15,7 @@ void print_dog(struct dog *d)
 		else
 			printf("(nil)");
 		printf("\n");
-		printf("Age: ")
+		printf("Age: ");
 		if (d->age)
 			printf("%f\n", d->age);
 		else
