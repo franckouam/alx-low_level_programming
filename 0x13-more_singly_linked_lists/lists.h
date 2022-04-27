@@ -1,5 +1,5 @@
-#ifndef LISTES_H
-#define LISTE_H
+#ifndef LISTS_H
+#define LISTS_H
 #include <stddef.h>
 /**
  * struct listint_s - singly linked list
@@ -7,7 +7,7 @@
  * @next: points to the next node
  *
  * Description: singly linked list node structure
- * 
+ *
  */
 typedef struct listint_s
 {
@@ -39,4 +39,4 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n);
 int delete_nodeint_at_index(listint_t **head, unsigned int index);
 
 
-#endif /* LISTE_H */
+#endif /* LISTS_H */
