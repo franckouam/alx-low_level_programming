@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 /**
  * _pow - Computes x raised to power of y.
  * @x: The mantisse.
