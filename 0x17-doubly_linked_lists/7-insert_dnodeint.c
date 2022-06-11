@@ -19,7 +19,7 @@ dlistint_t *insert_dnodeint_at_index(
 	if (node)
 	{
 		node->n = n;
-		if (idx == 0)
+		if (idx == 0 || head == NULL)
 		{
 			add_dnodeint(head, n);
 		}
@@ -33,9 +33,17 @@ dlistint_t *insert_dnodeint_at_index(
 			}
 			if (i + 1  == idx)
 			{
-				node->prev = tmp;
-				node->next = tmp->next;
-				tmp->next = node;
+				if (tmp == NULL)
+				{
+					add_dnodeint_end(head, n);
+				}
+				else
+				{
+					node->prev = tmp;
+					node->next = tmp->next;
+					tmp->next = node;
+					(node->next)->prev = node;
+				}
 			}
 		}
 	}
