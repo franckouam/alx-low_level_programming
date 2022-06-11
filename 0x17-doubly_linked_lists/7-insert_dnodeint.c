@@ -21,21 +21,17 @@ dlistint_t *insert_dnodeint_at_index(
 		node->n = n;
 		if (idx == 0)
 		{
-			node->prev = NULL;
-			node->next = *head;
-			if (*head)
-				(*head)->prev = node;
-			head = &node;
+			add_dnodeint(head, n);
 		}
 		else
 		{
 			tmp = *head;
-			while ((tmp != NULL) && (i + 1  < idx))
+			while ((tmp != NULL) && (i + 1 < idx))
 			{
 				tmp = tmp->next;
 				i++;
 			}
-			if (i + 1 == idx)
+			if (i + 1  == idx)
 			{
 				node->prev = tmp;
 				node->next = tmp->next;
