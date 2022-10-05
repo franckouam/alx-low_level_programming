@@ -16,13 +16,17 @@ int linear_search(int *array, size_t size, int value)
 {
 	int found = -1;
 	size_t i;
-	
+
 	if (array)
 	{
 		i = 0;
 		while (i < size && found == -1)
 		{
-			printf("Value checked array[%ld] = [%d]\n", i, array[i]);
+			print_str("Value checked array[");
+			_putchar('0' + i);
+			print_str("] = [");
+			_putchar('0' + i);
+			print_str("]\n");
 			if (array[i] == value)
 				found = array[i];
 			i++;
@@ -41,7 +45,7 @@ void print_array(int *array, size_t size)
 {
 	size_t i;
 
-	for (i=0; i<size; i++)
+	for (i = 0; i < size; i++)
 		_putchar('0' + array[i]);
 }
 
